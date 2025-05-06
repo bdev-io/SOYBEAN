@@ -3,3 +3,5 @@ ORIGIN/
 *.grib
 **/*.grib
 **/*.nc
+
+dataset/
