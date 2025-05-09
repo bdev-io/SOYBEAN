@@ -47,7 +47,7 @@ def download_era5(year, month):
 
 
 # 실행 루프 예시
-for year in range(2001, 2025):
+for year in range(2000, 2025):
     for month in range(1, 3):  # 혹은 월별 선택
         print(f"Downloading data for {year}-{month:02d}...")
         download_era5(str(year), month)
