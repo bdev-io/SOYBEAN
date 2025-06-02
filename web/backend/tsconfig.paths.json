@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@type/*": ["src/common/@types/*"],
+      "@config/*": ["src/common/config/*"],
+      "@constant/*": ["src/common/constants/*"],
+      "@error/*": ["src/common/errors/*"],
+      "@util/*": ["src/common/utils/*"],
+      "@decorator/*": ["src/common/decorators/*"],
+      "@db/*": ["src/common/db/*"],
+      "@common/*": ["src/common/*"],
+      "@src/*": ["src/*"],
+      "@root/*": ["./*"]
+    },
+    "typeRoots": ["./node_modules/@types/", "./src/common/@types/", "./@types/"]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "SOYBEAN-WS",
+  "version": "0.2.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "workspaces": {
+    "packages": [
+      "frontend",
+      "backend"
+    ],
+    "nohoist": [
+      "**"
+    ]
+  },
+  "scripts": {
+    "pre-dev": "yarn install",
+    "dev": "npx concurrently -n FE,BE -c green,blue \"yarn workspace soybean-fe dev\" \"yarn workspace soybean-api local\"",
+    "lint": "yarn workspaces run lint",
+    "frontend-dev": "yarn workspace soybean-fe dev",
+    "backend-dev": "yarn workspace soybean-api dev",
+    "backend-local": "yarn workspace soybean-api local",
+    "patch-fe": "yarn workspace soybean-fe patch",
+    "minor-fe": "yarn workspace soybean-fe minor",
+    "major-fe": "yarn workspace soybean-fe major",
+    "patch-be": "yarn workspace soybean-api patch",
+    "minor-be": "yarn workspace soybean-api minor",
+    "major-be": "yarn workspace soybean-api major",
+    "patch-ws": "echo \"[WORKSPACE VERSION]\n\";yarn version --patch --no-git-tag-version;yarn workspaces run patch;",
+    "minor-ws": "echo \"[WORKSPACE VERSION]\n\";yarn version --minor --no-git-tag-version;yarn workspaces run minor;",
+    "major-ws": "echo \"[WORKSPACE VERSION]\n\";yarn version --major --no-git-tag-version;yarn workspaces run major;"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

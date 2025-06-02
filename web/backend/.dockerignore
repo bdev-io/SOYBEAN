@@ -1,0 +1,60 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist
+
+# Tests
+coverage
+.nyc_output
+test
+tests
+**/*.test.ts
+**/*.spec.ts
+jest.config.js
+jest.setup.js
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Git
+.git
+.gitignore
+.github
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Documentation
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+*.md
+
+# Config files
+.prettierrc
+.eslintrc
+.eslintignore
+eslint.config.mjs
+
+# Temp files
+tmp
+temp

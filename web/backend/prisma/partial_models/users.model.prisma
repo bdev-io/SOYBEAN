@@ -1,0 +1,18 @@
+model Users {
+  uuid     String @id @default(uuid())
+  name     String
+  /// 아이디
+  username String @unique
+  /// 비밀번호
+  hash     String
+
+  /// @DtoReadOnly
+  /// @DtoCreateHidden
+  /// @DtoUpdateHidden
+  createdAt DateTime @default(now())
+
+  /// @DtoReadOnly
+  /// @DtoCreateHidden
+  /// @DtoUpdateHidden
+  updatedAt DateTime @updatedAt
+}
