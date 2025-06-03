@@ -50,6 +50,7 @@
   --color-orange: #ff8c00;
   --color-error: #ff4545;
   /* override exist color */
+  --color-icon-default: oklch(0.6467 0 0);
   --color-gray-5: #f9fafb;
   --color-gray-10: #f3f4f6;
   --color-gray-20: #e5e7eb;

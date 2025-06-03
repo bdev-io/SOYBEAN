@@ -3,5 +3,9 @@
 import DashboardComp from './components/Dashboard';
 
 export default function MainPage() {
-  return <DashboardComp />;
+  return (
+    <>
+      <DashboardComp />
+    </>
+  );
 }

@@ -6,7 +6,6 @@ import { pretendard, suit } from '@lib/font';
 import ProviderWrapper from '@lib/provider/ProviderWrapper';
 import ScrollAreaProvider from '@lib/provider/ScrollAreaProvider';
 
-import Sidebar from '@comp/sidebar/Sidebar';
 import Header from '@comp/ui/headers/header';
 
 import '@styles/globals.css';
