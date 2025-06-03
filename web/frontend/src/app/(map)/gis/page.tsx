@@ -38,6 +38,12 @@ export default function GisPage() {
     };
   }, []);
 
+  const mapInitialized = () => {
+    if (mapRef.current) {
+      console.log('Map initialized:', mapRef.current);
+    }
+  };
+
   return (
     <>
       <GISContainer
@@ -45,12 +51,7 @@ export default function GisPage() {
         width={width}
         height={height}
         mapRef={mapRef}
-        whenReady={() => {
-          console.log('Map is ready');
-          if (mapRef.current) {
-            console.log('Map reference:', mapRef.current);
-          }
-        }}
+        whenReady={mapInitialized}
       />
     </>
   );
