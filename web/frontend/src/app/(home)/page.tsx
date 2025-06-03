@@ -21,10 +21,10 @@ export default function MainPage() {
         </Card>
         <div className='flex-4 flex h-full flex-row gap-4'>
           <div className='flex flex-col gap-4'>
-            <Card className='flex-1'>
+            <Card className='flex-2'>
               <ErrorStatusComponent />
             </Card>
-            <Card className='flex-1'>
+            <Card className='flex-2'>
               <RegionalStatusComponent />
             </Card>
           </div>
