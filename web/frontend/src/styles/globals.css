@@ -3,6 +3,7 @@
 @import './color-palette.css';
 @import './custom-font.css';
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {

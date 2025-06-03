@@ -7,7 +7,7 @@ import ProviderWrapper from '@lib/provider/ProviderWrapper';
 import ScrollAreaProvider from '@lib/provider/ScrollAreaProvider';
 
 import Sidebar from '@comp/sidebar/Sidebar';
-import Header from '@comp/ui/header';
+import Header from '@comp/ui/headers/header';
 
 import '@styles/globals.css';
 
@@ -29,9 +29,6 @@ export default function RootLayout({
           <div className='h-screen w-screen'>
             <Header />
             <div className='flex h-[calc(100vh-65px)] overflow-hidden'>
-              <div className='min-w-[280px]'>
-                <Sidebar />
-              </div>
               <ScrollAreaProvider className='h-full flex-1'>
                 {children}
               </ScrollAreaProvider>
