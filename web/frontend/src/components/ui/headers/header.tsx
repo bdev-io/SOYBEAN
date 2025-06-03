@@ -47,9 +47,6 @@ export default function Header() {
 
       <div className='flex items-center gap-[16px]'>
         <HeaderSearchBar isGisPage={isGisPage} />
-      </div>
-
-      <div className='flex items-center gap-[4px]'>
         <HeaderMapButton />
         <HeaderNotificationButton hasNotification={true} />
       </div>
