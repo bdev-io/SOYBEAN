@@ -28,7 +28,7 @@ export default function PredictionResultStatusComponent() {
   } = dummyData;
 
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-4 p-2'>
+    <div className='flex h-full w-full flex-col items-center justify-center gap-4 p-2'>
       <h2 className='mb-2 text-sm font-semibold text-black'>
         [전국] 생산량 추정 (ton/acre)
       </h2>

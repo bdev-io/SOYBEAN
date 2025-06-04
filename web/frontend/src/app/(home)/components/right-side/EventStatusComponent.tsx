@@ -53,9 +53,7 @@ function EventList({ title, items }: { title: string; items: EventItem[] }) {
 export default function EventStatusComponent() {
   return (
     <div className='flex h-full w-full flex-col items-center justify-center gap-4 p-2'>
-      <h1 className='mb-1 font-semibold text-black'>
-        장애 이벤트 현황
-      </h1>
+      <h1 className='mb-1 font-semibold text-black'>장애 이벤트 현황</h1>
       <div className='flex flex-1 gap-2 overflow-x-auto'>
         <EventList title='실시간 이벤트 현황' items={liveEvents} />
         <EventList title='이벤트 유형 TOP3' items={eventTypesTop3} />
