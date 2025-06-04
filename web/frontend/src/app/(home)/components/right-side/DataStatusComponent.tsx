@@ -1,21 +1,45 @@
+type CoverageItem = {
+  name: string;
+  percentage: number;
+  delta: number;
+};
+
+const coverageData: CoverageItem[] = [
+  { name: 'Sentinel', percentage: 96.6, delta: 2.5 },
+  { name: 'MODIS', percentage: 95.7, delta: -1.0 },
+  { name: 'ERA5', percentage: 94.9, delta: -2.0 },
+  { name: '생산량', percentage: 97.7, delta: 1.7 },
+];
+
+function formatDelta(delta: number) {
+  const isPositive = delta >= 0;
+  return (
+    <span
+      className={`text-[10px] ${isPositive ? 'text-sky-600' : 'text-red-500'}`}
+    >
+      {isPositive ? `(+${delta})` : `(${delta})`}
+    </span>
+  );
+}
+
 export default function DataStatusComponent() {
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-4'>
-      <div className='flex w-full items-start justify-between'>
-        <h1 className='font-pretendard font-semibold text-black'>
-          추론 운영 / 경고 현황
-        </h1>
-      </div>
-      <div className='w-full flex-1'>
-        <div className='w-full flex-1 flex-col items-center justify-center gap-4'>
-          <p className='text-lg'>
-            This component displays the current status of the application.
-          </p>
-        </div>
-        <div className='flex flex-col items-center justify-center'>
-          <span className='text-green-500'>Status: Online</span>
-          <span className='text-gray-500'>Last updated: Just now</span>
-        </div>
+    <div className='flex h-full w-full flex-col items-center justify-between gap-4 p-2'>
+      <h2 className='mb-2 text-sm font-semibold text-black'>
+        데이터 현황 (Coverage)
+      </h2>
+      <div className='flex flex-col gap-1 text-[11px]'>
+        {coverageData.map(({ name, percentage, delta }) => (
+          <div key={name} className='flex items-center justify-between'>
+            <span className='text-gray-700'>{name}</span>
+            <div className='flex items-center gap-1'>
+              <span className='font-semibold text-black'>
+                {percentage.toFixed(1)}%
+              </span>
+              {formatDelta(delta)}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

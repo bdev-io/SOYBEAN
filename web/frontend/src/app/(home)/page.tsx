@@ -15,7 +15,7 @@ import PredictionResultStatusComponent from './components/right-side/PredictionR
 export default function MainPage() {
   return (
     <div className='flex h-[calc(100vh-65px)] w-full flex-row items-center justify-center gap-[10px] p-4'>
-      <div className='flex-6 flex h-full flex-col gap-4'>
+      <div className='flex-3 flex h-full flex-col gap-4'>
         <Card className='flex-1'>
           <StatusComponent />
         </Card>
@@ -28,14 +28,14 @@ export default function MainPage() {
               <RegionalStatusComponent />
             </Card>
           </div>
-          <div className='flex-3 flex flex-col gap-4'>
-            <Card className='w-full min-w-[320px] flex-1 gap-2'>
-              <MinimapComponent />
-            </Card>
-          </div>
         </div>
       </div>
       <div className='flex-4 flex h-full flex-col gap-4'>
+        <Card className='w-full min-w-[320px] flex-1 gap-2'>
+          <MinimapComponent />
+        </Card>
+      </div>
+      <div className='flex-3 flex h-full flex-col gap-4'>
         <Card className=''>
           <PredictionResultStatusComponent />
         </Card>

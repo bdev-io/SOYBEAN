@@ -13,7 +13,7 @@ export default function MinimapComponent() {
   const getLocation = { x: 37.5665, y: 126.978 }; // Example coordinates for Seoul
 
   return (
-    <div className='w-full h-full'>
+    <div className='h-full w-full'>
       <GISContainer getLocation={getLocation} />
     </div>
   );
