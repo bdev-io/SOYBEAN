@@ -38,7 +38,7 @@ export default function RegionStatusTable() {
     <div className='flex h-full w-full flex-col items-center justify-start gap-4 p-2'>
       <h2 className='mb-2 text-sm font-semibold text-black'>지역별 현황</h2>
 
-      <div className='text-[15px] w-full'>
+      <div className='w-full text-[15px]'>
         <div className='grid grid-cols-4 rounded-t-sm bg-gray-100 font-bold text-white'>
           <div className='px-2 py-1 text-center'>법정동</div>
           <div className='px-2 py-1 text-center'>장애유형</div>

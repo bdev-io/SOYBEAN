@@ -6,9 +6,13 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import type { GeoJsonObject } from 'geojson';
 import type { Map as LeafletMap } from 'leaflet';
 
+import type { ToolTipProperties } from './gisTooltip';
+
 import parseGeoraster from 'georaster';
 import GeoRasterLayer from 'georaster-layer-for-leaflet';
 import { CRS, geoJSON, LatLngBounds } from 'leaflet';
+
+import { gisToolTip } from './gisTooltip';
 
 import 'leaflet/dist/leaflet.css';
 
@@ -59,9 +63,7 @@ export default function GISContainer({ children, width, height }: MapProps) {
           onEachFeature: (feature, layer) => {
             if (feature.properties) {
               layer.bindTooltip(
-                `<div class="text-sm font-semibold text-gray-800">
-                  ${feature.properties.sidonm} ${feature.properties.sggnm} - 농지: ${feature.properties.farmmap_count}개
-                </div>`,
+                gisToolTip(feature.properties as unknown as ToolTipProperties),
                 {
                   permanent: false,
                   interactive: false,
