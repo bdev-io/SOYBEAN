@@ -24,7 +24,7 @@ const hotRegionsTop3: EventItem[] = [
 function EventList({ title, items }: { title: string; items: EventItem[] }) {
   return (
     <div className='min-w-[120px] flex-1 rounded-sm bg-neutral-50 p-2'>
-      <h3 className='mb-1 text-[10px] font-semibold text-gray-700'>{title}</h3>
+      <h3 className='mb-1 text-[12px] font-semibold text-gray-700'>{title}</h3>
       <ul className='flex flex-col gap-1'>
         {items.map((item, idx) => (
           <li
@@ -52,11 +52,11 @@ function EventList({ title, items }: { title: string; items: EventItem[] }) {
 
 export default function EventStatusComponent() {
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-4 p-2'>
-      <h2 className='mb-2 text-sm font-semibold text-black'>
+    <div className='flex h-full w-full flex-col items-center justify-center gap-4 p-2'>
+      <h1 className='mb-1 font-semibold text-black'>
         장애 이벤트 현황
-      </h2>
-      <div className='flex gap-2 overflow-x-auto'>
+      </h1>
+      <div className='flex flex-1 gap-2 overflow-x-auto'>
         <EventList title='실시간 이벤트 현황' items={liveEvents} />
         <EventList title='이벤트 유형 TOP3' items={eventTypesTop3} />
         <EventList title='장애 집중 지역' items={hotRegionsTop3} />
