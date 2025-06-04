@@ -34,8 +34,11 @@ export default function ErrorStatusComponent() {
       </div>
 
       <div className='flex w-full flex-col items-start justify-between gap-2'>
-        <InnerProgress name='정상' value={80} />
-        <InnerProgress name='정상' value={20} />
+        <InnerProgress name='정상' value={72} />
+        <InnerProgress name='강수량 부족' value={10} />
+        <InnerProgress name='온도 스트레스' value={8} />
+        <InnerProgress name='광 스트레스' value={7} />
+        <InnerProgress name='기타' value={3} />
       </div>
     </div>
   );
