@@ -64,8 +64,7 @@ export default function GISContainer({ children, width, height }: MapProps) {
         return modisLayer;
       };
 
-      const ndviLayer = await getMap('ndvi_2016');
-      ndviLayer.addTo(mapRef.current);
+      console.log('Adding MODIS layer to map');
     }
   };
 

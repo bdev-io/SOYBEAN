@@ -20,7 +20,7 @@ export default function MainPage() {
           <StatusComponent />
         </Card>
         <div className='flex-4 flex h-full flex-row gap-4'>
-          <div className='flex flex-col gap-4'>
+          <div className='flex-2 flex flex-col gap-4'>
             <Card className='flex-2'>
               <ErrorStatusComponent />
             </Card>
@@ -28,8 +28,8 @@ export default function MainPage() {
               <RegionalStatusComponent />
             </Card>
           </div>
-          <div className='flex flex-col gap-4'>
-            <Card className='flex-1'>
+          <div className='flex-3 flex flex-col gap-4'>
+            <Card className='w-full min-w-[320px] flex-1 gap-2'>
               <MinimapComponent />
             </Card>
           </div>
