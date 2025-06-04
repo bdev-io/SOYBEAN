@@ -31,28 +31,13 @@ export function gisToolTip({
             {sidonm} {sggnm}
           </span>
         </div>
-        <div className='flex items-center gap-1 text-gray-300'>
-          <svg width='20' height='20' viewBox='0 0 10 10' fill='none'>
-            <path
-              d='M4.35 4.66L6.1 6.4L5.83 6.67L3.82 4.66L5.83 2.65L6.1 2.91L4.35 4.66Z'
-              fill='#969696'
-            />
-          </svg>
-          <span className='text-[16px]'>1/1</span>
-          <svg width='20' height='20' viewBox='0 0 10 10' fill='none'>
-            <path
-              d='M6.44 4.66L4.7 2.91L4.97 2.65L6.98 4.66L4.97 6.67L4.7 6.4L6.44 4.66Z'
-              fill='#969696'
-            />
-          </svg>
-        </div>
       </div>
 
       {/* 구분선 */}
-      <div className='absolute left-[12px] top-[48px] h-[2px] w-[272] bg-gray-400 opacity-50'></div>
+      <div className='absolute left-[12px] top-[60px] h-[2px] w-[272] bg-gray-400 opacity-50'></div>
 
       {/* 내용 */}
-      <div className='absolute left-[8px] top-[28px] flex w-[260] flex-col gap-1'>
+      <div className='absolute left-[16px] top-[72px] flex w-[260] flex-col gap-1'>
         <div className='flex justify-between'>
           <span>논 / 밭</span>
           <span>{farmmap_count}구</span>
@@ -64,7 +49,7 @@ export function gisToolTip({
         <div className='flex justify-between'>
           <span>추정 생산량 (ton/acre)</span>
           <span>
-            <span>대 </span>
+            <span>[ton/10a] </span>
             <span className='text-indigo-300'>({(0.0).toFixed(1)}%)</span>
           </span>
         </div>
@@ -81,10 +66,7 @@ export function gisToolTip({
       {/* 버튼 영역 */}
       <div className='absolute bottom-2 left-2 flex gap-2'>
         <button className='w-32 rounded bg-black/60 px-2 py-1 text-[13px] font-medium text-white'>
-          기록열람
-        </button>
-        <button className='w-32 rounded bg-black/60 px-2 py-1 text-[13px] font-medium text-white'>
-          장애 이력 보기
+          데이터 열람
         </button>
       </div>
     </div>
