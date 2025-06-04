@@ -30,7 +30,6 @@ export default function GISContainer({ children, width, height }: MapProps) {
   console.log(mapRef);
 
   const mapInitialized = async () => {
-
     if (mapRef.current) {
       console.log('Map initialized:', mapRef.current);
       const response = await fetch('https://s3.ql.gl/county.geojson');
@@ -67,7 +66,6 @@ export default function GISContainer({ children, width, height }: MapProps) {
 
       const ndviLayer = await getMap('ndvi_2016');
       ndviLayer.addTo(mapRef.current);
-
     }
   };
 
