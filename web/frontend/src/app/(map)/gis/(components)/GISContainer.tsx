@@ -67,9 +67,11 @@ export default function GISContainer({ children, width, height }: MapProps) {
                 gisToolTip(feature.properties as unknown as ToolTipProperties),
                 {
                   permanent: false,
-                  interactive: false,
-                  direction: 'center',
+                  interactive: true,
+                  direction: 'auto',
                   className: 'custom-tooltip',
+                  opacity: 0.8,
+                  sticky: true,
                 },
               );
             }

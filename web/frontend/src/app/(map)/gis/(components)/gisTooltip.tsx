@@ -39,7 +39,7 @@ export function gisToolTip({
       {/* 내용 */}
       <div className='absolute left-[16px] top-[72px] flex w-[260] flex-col gap-1'>
         <div className='flex justify-between'>
-          <span>논 / 밭</span>
+          <span className='text-blue-300'>논 / 밭</span>
           <span>{farmmap_count}구</span>
         </div>
         <div className='flex justify-between'>
@@ -47,7 +47,7 @@ export function gisToolTip({
           <span>{(0.0).toFixed(1)} ha</span>
         </div>
         <div className='flex justify-between'>
-          <span>추정 생산량 (ton/acre)</span>
+          <span>추정 생산량</span>
           <span>
             <span>[ton/10a] </span>
             <span className='text-indigo-300'>({(0.0).toFixed(1)}%)</span>
@@ -55,7 +55,7 @@ export function gisToolTip({
         </div>
         <div className='flex justify-between'>
           <span className='w-32'>데이터 기준일</span>
-          <span></span>
+          <span>{`${new Date().toLocaleDateString()}`}</span>
         </div>
         <div className='flex justify-between'>
           <span>최근 장애유형</span>
