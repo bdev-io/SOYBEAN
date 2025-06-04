@@ -6,7 +6,3 @@ import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
-export function isTauriAvailable(): boolean {
-  return typeof window !== 'undefined' && !!window.__TAURI__;
-}
