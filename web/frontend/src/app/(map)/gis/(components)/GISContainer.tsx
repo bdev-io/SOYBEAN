@@ -36,13 +36,44 @@ export default function GISContainer({ children, width, height }: MapProps) {
       const data = await response.json();
       const geoJsonData = geoJSON(data as unknown as GeoJsonObject, {
         style: {
-          color: '#3388ff',
+          color: '#00aa00',
           weight: 2,
-          opacity: 1,
-          fillOpacity: 0.2,
+          opacity: 0.7,
+          fillOpacity: 0,
         },
       });
       geoJsonData.addTo(mapRef.current);
+
+      const responseResult = await fetch('https://s3.ql.gl/result.geojson');
+      const dataResult = await responseResult.json();
+      const geoResultJsonData = geoJSON(
+        dataResult as unknown as GeoJsonObject,
+        {
+          pane: 'overlayPane',
+          style: {
+            color: '#ffffff',
+            weight: 2,
+            opacity: 0.2,
+            fillOpacity: 0.1,
+          },
+          onEachFeature: (feature, layer) => {
+            if (feature.properties) {
+              layer.bindTooltip(
+                `<div class="text-sm font-semibold text-gray-800">
+                  ${feature.properties.sidonm} ${feature.properties.sggnm} - 농지: ${feature.properties.farmmap_count}개
+                </div>`,
+                {
+                  permanent: false,
+                  interactive: false,
+                  direction: 'center',
+                  className: 'custom-tooltip',
+                },
+              );
+            }
+          },
+        },
+      );
+      geoResultJsonData.addTo(mapRef.current);
 
       const _getMap = async (fileName: string): GeoRasterLayer => {
         const fileUrl = `https://s3.ql.gl/tiff/${fileName}.tif`;
