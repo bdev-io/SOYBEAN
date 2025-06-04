@@ -44,7 +44,7 @@ export default function GISContainer({ children, width, height }: MapProps) {
       });
       geoJsonData.addTo(mapRef.current);
 
-      const getMap = async (fileName: string): GeoRasterLayer => {
+      const _getMap = async (fileName: string): GeoRasterLayer => {
         const fileUrl = `https://s3.ql.gl/tiff/${fileName}.tif`;
         const response = (await fetch(fileUrl)).arrayBuffer();
         const geoRaster = await parseGeoraster(response);
