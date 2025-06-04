@@ -1,0 +1,104 @@
+Image object at 0x7e8d08cbe7d0>}
+{'mapid': 'projects/ee-kuuwange/maps/7456274c5ebb06b28c5338168766834a-55998301bfe70e329df2e1cf589ef83f',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08dd2590>, 'image': <ee.image.Image object at 0x7e8d08e14650>}
+    Image List: 231 Cleaned List: 152 YEAR: 2021 {'mapid':
+      'projects/ee-kuuwange/maps/58823a35076c203631e5b5bad6b08593-c4370d4998af9734f18dda1cc11a7e89',
+      'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+        0x7e8d08f02fd0>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+{'mapid': 'projects/ee-kuuwange/maps/6c853fc2f4431e851940aa4f7c1646bf-0223e3c6a870b4abc2009421ffbb300f',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08dd3510>, 'image': <ee.image.Image object at 0x7e8d08d68ad0>}
+{'mapid': 'projects/ee-kuuwange/maps/dd92060e90cf3b125776561c31870d2e-64be4e176e246cb3e7bde3a5b2f221f4',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08ca9250>, 'image': <ee.image.Image object at 0x7e8d08ced450>}
+{'mapid': 'projects/ee-kuuwange/maps/5df009be02b374e9fb2be9508517c7ac-a68dab6bb6286a0743a764675bd0e2ed',
+  'token': maps/58823a35076c203631e5b5bad6b08593-8eb5a6d655e2490a9adbb1b2627e0a95',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08dd2fd0>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+{'mapid': 'projects/ee-kuuwange/maps/454a12d88e101fa91bf1fcb353118011-e353264355afdc10d9ab7cb05d17c87b',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08ec59d0>, 'image': <ee.image.Image object at 0x7e8d08c82550>}
+{'mapid': 'projects/ee-kuuwange/maps/31092bd9b25d99d871248e35f4031525-d188ee98870783b7f947a1769a719b8d',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08e34b10>, 'image': <ee.image.Image object at 0x7e8d0dfc8190>}
+{'mapid': 'projects/ee-kuuwange/maps/27182f8cc4f779eeb9dda6aad0c6cc06-758f39da8705c2a87249bdbcdbbaed55',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08cbf290>, 'image': <ee.image.Image object at 0x7e8d08e3c150>'', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8cf65f8710>, 'image': <ee.image.Image object at 0x7e8d08cee450>}
+    Image List: 344 Cleaned List: 152 YEAR: 2022 {'mapid':
+      'projects/ee-kuuwange/maps/58823a35076c203631e5b5bad6b08593-93cfce8ad62591cceb344e3d64b6f6be',
+      'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+        0x7e8d08dd13d0>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+{'mapid': 'projects/ee-kuuwange/maps/5197c61bec46fb6c860f17646c3da3af-b109525fc629688bca5d88e7e1a6df25',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08c6b150>, 'image': <ee.image.Image object at 0x7e8d08e3e750>}
+{'mapid': 'projects/ee-kuuwange/maps/0e8c90e56192df31d902b6f6ca307362-4aa8795487acab2f76e8555e35e78c66',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08c7b490>, 'image': <ee.image.Image object at 0x7e8d08dd2b90>}
+{'mapid': 'projects/ee-kuuwange/maps/ecd260eb2c6484a3eea577cac8de659f-2af5e30ece6a4bca9880a2f03a83a2cf',
+  'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+    0x7e8d08c60590>, 'image': <ee.image.Image object at 0x7e8d08cbd110>}
+    Image List: 210 Cleaned List: 0 YEAR: 2023 {'mapid':
+      'projects/ee-kuuwange/EAR: 2016 {'mapid':
+        'projects/ee-kuuwange/maps/58823a35076c203631e5b5bad6b08593-a111997d844ef79abd56b836ad667edd',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08cab050>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+      {'mapid': 'projects/ee-kuuwange/maps/911d0fd03d24203048fdd34a217a6fca-6673f6764cb4f8b0aad2d8d94bb38093',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08c52410>, 'image': <ee.image.Image object at 0x7e8d08c53a10>}
+      {'mapid': 'projects/ee-kuuwange/maps/cc2c847e5244e882173fde582e6994e8-c39a855df982e7f67884f848c86f19c2',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08e3ee10>, 'image': <ee.image.Image object at 0x7e8d08cc91d0>}
+      {'mapid': 'projects/ee-kuuwange/maps/bec91657d81c4584ab22c73b141acce4-8642eee3713c18a750d500ffe51e57de',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d55f1a150>, 'image': <ee.image.Image object at 0x7e8d08c46bd0>}
+      Image List: 85 Cleaned List: 152 YEAR: 2017 {'mapid':
+        'projects/ee-kuuwange/maps/58823a35076c203631e5b5bad6b08593-d2738813a54580592cef3ef4bd552a78',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08f00ad0>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+      {'mapid': 'projects/ee-kuuwange/maps/f3e03b2356bb4046b0dc30f5d9dc192a-0b796882d936e9d42f3c9a9da2e05836',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08c45ed0>, 'image': <ee.image.Image object at 0x7e8d08cca610>}
+      {'mapid': 'projects/ee-kuuwange/maps/2c94edad00bfd698372eaa7390176abf-f3731318abc4e344c286d42b34fcc74e',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d0cc246d0>, 'image': <ee.image.Image object at 0x7e8d08c68e50>}
+      {'mapid': 'projects/ee-kuuwange/maps/6014b2dcd12080ca68629762f8784c2f-27318be908c33ababfb91b4057d2228c',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08cbd310>, 'image': <ee.image.Image object at 0x7e8d08f022d0>}
+      Image List: 302 Cleaned List: 152 YEAR: 2018 {'mapid':
+        'projects/ee-kuuwange/maps/58823a35076c203631e5b5bad6b08593-0b86162f90cefe0512245ff31d40e7be',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08c524d0>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+      {'mapid': 'projects/ee-kuuwange/maps/aa49c6fa4da46608ac7bee0b4cbcaa3d-4df09db7dff48fa31d02dd8be4f3ac9f',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08e150d0>, 'image': <ee.image.Image object at 0x7e8d08cbf010>}
+      {'mapid': 'projects/ee-kuuwange/maps/7463f06ed404cdc08eea76d2b796711b-bd5db256a0529d7b469e8ef85a7fe4a8',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d0dfd3f90>, 'image': <ee.image.Image object at 0x7e8d08cbd290>}
+      {'mapid': 'projects/ee-kuuwange/maps/2f14420b730578520f73b9444c54beaf-350379944dc998a0fc51682e44ddd721',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08c617d0>, 'image': <ee.image.Image object at 0x7e8d08cbd210>}
+      Image List: 285 Cleaned List: 152 YEAR: 2019 {'mapid':
+        'projects/ee-kuuwange/maps/58823a35076c203631e5b5bad6b08593-20c35f89ec4c5bf3c3154be5d0b78184',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08c61950>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+      {'mapid': 'projects/ee-kuuwange/maps/4e3f2080e5dcbd5c5d40f7820ff395a3-b07328688f54857f865c15edc51bfa8c',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8cf65f8f90>, 'image': <ee.image.Image object at 0x7e8d08c63610>}
+      {'mapid': 'projects/ee-kuuwange/maps/553eb3ed78c226a9735bee085912b126-15224d04b8f9011d8866e9e9b814d41d',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08c45590>, 'image': <ee.image.Image object at 0x7e8d08e06210>}
+      {'mapid': 'projects/ee-kuuwange/maps/68ecaa8110c0df4bad51bd9ab9898303-8b6bf7f973f9605fe3e93e605ca44d56',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08e150d0>, 'image': <ee.image.Image object at 0x7e8d08cd03d0>}
+      Image List: 255 Cleaned List: 152 YEAR: 2020 {'mapid':
+        'projects/ee-kuuwange/maps/58823a35076c203631e5b5bad6b08593-2cb9b4eaae732f3141092f7777095445',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8cf65fd690>, 'image': <ee.image.Image object at 0x7e8d0e74ca50>}
+      {'mapid': 'projects/ee-kuuwange/maps/90eda6beabdb2932c8c913eab7a5ca8f-cb576ff9ee71918c73f2b28d4770c6a7',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08e0de50>, 'image': <ee.image.Image object at 0x7e8d08cbe710>}
+      {'mapid': 'projects/ee-kuuwange/maps/2472f52bb71c5a0202b07f9941cb903c-4739902d652abd676f673d9b5f9936dd',
+        'token': '', 'tile_fetcher': <ee.data.TileFetcher object at
+          0x7e8d08e35850>, 'image': <ee.image.

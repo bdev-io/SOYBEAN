@@ -6,6 +6,8 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import type { GeoJsonObject } from 'geojson';
 import type { Map as LeafletMap } from 'leaflet';
 
+import parseGeoraster from 'georaster';
+import GeoRasterLayer from 'georaster-layer-for-leaflet';
 import { CRS, geoJSON, LatLngBounds } from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
@@ -40,6 +42,29 @@ export default function GISContainer({ children, width, height }: MapProps) {
           fillOpacity: 0.2,
         },
       });
+
+      const getMap = async (fileName: string): GeoRasterLayer => {
+        const fileUrl = `https://s3.ql.gl/tiff/${fileName}.tif`;
+        const response = (await fetch(fileUrl)).arrayBuffer();
+        const geoRaster = await parseGeoraster(response);
+        const modisLayer = new GeoRasterLayer({
+          georaster: geoRaster,
+          pixelValuesToColorFn: (values: any) => {
+            const ndvi = values[0];
+            if (ndvi < 0.2) return 'blue'; // Water
+            if (ndvi < 0.4) return 'green'; // Vegetation
+            if (ndvi < 0.6) return 'yellow'; // Cropland
+            return 'red'; // Urban or barren land
+          },
+          resolution: 30,
+          bounds: defaultBounds,
+          updateWhenIdle: true,
+        });
+        return modisLayer;
+      };
+
+      const ndviLayer = await getMap('ndvi_2016');
+      ndviLayer.addTo(mapRef.current);
 
       geoJsonData.addTo(mapRef.current);
     }
