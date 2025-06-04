@@ -55,6 +55,7 @@ export default function GISContainer({ children, width, height }: MapProps) {
         {
           pane: 'overlayPane',
           style: {
+            interactive: true,
             color: '#ffffff',
             weight: 2,
             opacity: 0.2,

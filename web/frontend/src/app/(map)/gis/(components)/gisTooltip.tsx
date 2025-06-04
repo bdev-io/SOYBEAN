@@ -18,7 +18,7 @@ export function gisToolTip({
     <div
       className={cn(
         'y-[0px] relative z-50 m-0 h-64 w-72 overflow-hidden',
-        "rounded-sm bg-black/70 p-0 font-['Pretendard'] text-[12px] text-white",
+        'rounded-sm bg-black/70 p-0 text-[16px] text-white',
       )}
     >
       {/* 상단 타이틀 */}
