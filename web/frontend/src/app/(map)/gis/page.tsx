@@ -1,8 +1,6 @@
 'use client';
 import dynamic from 'next/dynamic';
-import React, { useEffect, useRef } from 'react';
-
-import type { Map as LeafletMap } from 'leaflet';
+import React, { useEffect } from 'react';
 
 export default function GisPage() {
   const GISContainer = dynamic(
@@ -17,8 +15,6 @@ export default function GisPage() {
 
   const [width, setWidth] = React.useState(100);
   const [height, setHeight] = React.useState(100);
-
-  const mapRef = useRef<LeafletMap | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,21 +34,9 @@ export default function GisPage() {
     };
   }, []);
 
-  const mapInitialized = () => {
-    if (mapRef.current) {
-      console.log('Map initialized:', mapRef.current);
-    }
-  };
-
   return (
     <>
-      <GISContainer
-        getLocation={getLocation}
-        width={width}
-        height={height}
-        mapRef={mapRef}
-        whenReady={mapInitialized}
-      />
+      <GISContainer getLocation={getLocation} width={width} height={height} />
     </>
   );
 }

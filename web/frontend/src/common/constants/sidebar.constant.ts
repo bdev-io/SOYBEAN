@@ -39,5 +39,5 @@ export const NAV_LIST = [
       { id: 7, title: '아카이브 자료 관리', url: '/management/archive' },
       { id: 8, title: '교수 업적 관리', url: '/management/professor' },
     ],
-  }
+  },
 ];

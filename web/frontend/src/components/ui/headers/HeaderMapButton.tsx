@@ -28,7 +28,7 @@ export default function HeaderMapButton() {
       onClick={handleMapToggle}
     >
       <IconMap
-        className={`size-4  ${isGisPage ? 'fill-blue-600' : 'fill-icon-default'}`}
+        className={`size-4 ${isGisPage ? 'fill-blue-600' : 'fill-icon-default'}`}
       />
     </Button>
   );

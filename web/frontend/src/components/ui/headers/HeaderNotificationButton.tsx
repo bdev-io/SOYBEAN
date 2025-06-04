@@ -10,14 +10,12 @@ export default function HeaderNotificationButton({
 }) {
   return (
     <Button
-      variant="ghost"
-      size="icon"
-      className="size-8 rounded-md hover:bg-gray-100"
-      aria-label="Icon button"
+      variant='ghost'
+      size='icon'
+      className='size-8 rounded-md hover:bg-gray-100'
+      aria-label='Icon button'
     >
       <IconNotification className='size-4' hasNotification={hasNotification} />
     </Button>
   );
 }
-
-
