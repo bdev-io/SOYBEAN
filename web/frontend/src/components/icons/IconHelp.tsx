@@ -17,4 +17,3 @@ export default function IconHelp({ className }: { className?: string }) {
     </svg>
   );
 }
-
