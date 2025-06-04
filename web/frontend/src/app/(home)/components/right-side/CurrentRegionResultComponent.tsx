@@ -21,13 +21,13 @@ const regionData: RegionStatus[] = [
 
 export default function CurrentRegionResultStatusComponent() {
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-4 p-2'>
+    <div className='flex h-full w-full flex-col items-center justify-center gap-4 p-2'>
       <div>
         <h2 className='mb-2 font-semibold text-black'>
           [전남] 지역 주요 생산량 추정치 (ton/acre)
         </h2>
       </div>
-      <div className='flex items-center justify-start gap-6 overflow-x-auto'>
+      <div className='flex flex-row items-center justify-start gap-6 overflow-x-auto'>
         {regionData.map(({ name, value, status }, _index) => (
           <div
             key={name}

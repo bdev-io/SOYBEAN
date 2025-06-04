@@ -24,11 +24,9 @@ function formatDelta(delta: number) {
 
 export default function DataStatusComponent() {
   return (
-    <div className='flex h-full w-full flex-col items-center justify-ccenter gap-4 p-2'>
+    <div className='flex h-full w-full flex-col items-center justify-center gap-4 p-2'>
       <div className='mb-1'>
-        <h2 className='font-semibold text-black'>
-          데이터 현황 (Coverage)
-        </h2>
+        <h2 className='font-semibold text-black'>데이터 현황 (Coverage)</h2>
       </div>
       <div className='flex flex-row flex-col gap-1'>
         {coverageData.map(({ name, percentage, delta }) => (

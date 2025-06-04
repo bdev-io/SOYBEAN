@@ -51,7 +51,7 @@ export default function StatusComponent() {
       </div>
 
       <div className='w-full'>
-        <div className='flex w-full flex-row items-center justify-center gap-2 text-lg text-gray-600'>
+        <div className='flex w-full flex-row items-center justify-center gap-2 text-sm text-gray-600'>
           <div className='flex flex-1 flex-row justify-center'>
             <div>
               <span className='font-semibold text-gray-500'>정상&nbsp;</span>
