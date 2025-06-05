@@ -21,12 +21,14 @@ const regionData: RegionStatus[] = [
 
 export default function CurrentRegionResultStatusComponent() {
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-4 p-2'>
-      <h2 className='mb-2 text-sm font-semibold text-black'>
-        [전남] 지역 주요 생산량 추정치 (ton/acre)
-      </h2>
-      <div className='flex items-center justify-start gap-6 overflow-x-auto'>
-        {regionData.map(({ name, value, status }, index) => (
+    <div className='flex h-full w-full flex-col items-center justify-center gap-4 p-2'>
+      <div>
+        <h2 className='mb-2 font-semibold text-black'>
+          [전남] 지역 주요 생산량 추정치 (ton/acre)
+        </h2>
+      </div>
+      <div className='flex flex-row items-center justify-start gap-6 overflow-x-auto'>
+        {regionData.map(({ name, value, status }, _index) => (
           <div
             key={name}
             className='flex min-w-[60px] flex-col items-center gap-1 text-xs text-gray-700'
@@ -41,9 +43,6 @@ export default function CurrentRegionResultStatusComponent() {
                 </svg>
               )}
             </div>
-            {index < regionData.length - 1 && (
-              <div className='h-8 w-px bg-gray-400 opacity-30' />
-            )}
           </div>
         ))}
       </div>

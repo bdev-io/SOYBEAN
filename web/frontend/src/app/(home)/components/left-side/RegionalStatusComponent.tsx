@@ -36,7 +36,7 @@ const regionEventData: RegionEvent[] = [
 export default function RegionStatusTable() {
   return (
     <div className='flex h-full w-full flex-col items-center justify-start gap-4 p-2'>
-      <h2 className='mb-2 text-sm font-semibold text-black'>지역별 현황</h2>
+      <h2 className='mb-2 font-semibold text-black'>지역별 현황</h2>
 
       <div className='w-full text-[15px]'>
         <div className='grid grid-cols-4 rounded-t-sm bg-gray-100 font-bold text-white'>

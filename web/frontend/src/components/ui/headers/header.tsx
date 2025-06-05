@@ -6,6 +6,7 @@ import React from 'react';
 
 import { cn } from '@lib/utils';
 
+import HeaderHelpButton from './HeaderHelpButton';
 import HeaderMapButton from './HeaderMapButton';
 import HeaderNotificationButton from './HeaderNotificationButton';
 import HeaderSearchBar from './HeaderSearchBar';
@@ -47,6 +48,7 @@ export default function Header() {
 
       <div className='flex items-center gap-[16px]'>
         <HeaderSearchBar isGisPage={isGisPage} />
+        <HeaderHelpButton />
         <HeaderMapButton />
         <HeaderNotificationButton hasNotification={true} />
       </div>
