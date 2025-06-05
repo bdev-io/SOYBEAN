@@ -3,8 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 
-import type { GeoJsonObject } from 'geojson';
-import type { Map as LeafletMap } from 'leaflet';
+import type { GeoJsonObject, Geometry } from 'geojson';
+import type { GeoJSONOptions, Map as LeafletMap } from 'leaflet';
 
 import type { ToolTipProperties } from './gisTooltip';
 
@@ -31,27 +31,84 @@ export default function GISContainer({ children, width, height }: MapProps) {
     [33.0, 131.9], // 북동쪽 좌표 (위도, 경도)
   );
 
-  console.log(mapRef);
+  const appendGeoJson = async (
+    geoJsonUrl: string,
+    options: GeoJSONOptions<any, Geometry> | null,
+  ) => {
+    const result = await fetch(geoJsonUrl);
+    const dataResult = await result.json();
+    const fmGeoJson = geoJSON(dataResult as unknown as GeoJsonObject, options);
+    fmGeoJson.addTo(mapRef.current!);
+    return fmGeoJson;
+  };
 
+  const getPartial = async (idx: number) => {
+    const partial = await appendGeoJson(
+      `https://s3.ql.gl/GEOJSON/part_${idx.toString().padStart(4, '0')}.geojson`,
+      {
+        interactive: true,
+        style: {
+          pane: 'overlayPane',
+          interactive: true,
+          color: '#00ffff',
+          weight: 2,
+          opacity: 1.0,
+          fillOpacity: 1,
+        },
+        onEachFeature: (feature, layer) => {
+          if (feature.properties) {
+            const {
+              UID,
+              area_ha,
+              area_predict,
+              predict,
+              sidonm,
+              yield_history,
+              면적,
+              법정동주소,
+
+              팜맵ID,
+            } = feature.properties;
+            layer.bindTooltip(
+              `<div class="tooltip-content text-black rounded-all">
+                <h1 class="tooltip-title">${sidonm}</h1>
+                <p><strong>팜맵 ID:</strong> ${팜맵ID}</p>
+                <p><strong>법정동 주소:</strong> ${법정동주소}</p>
+                <p><strong>면적:</strong> ${면적.toFixed(2)} m^2</p>
+                <p><strong>예측 생산량:</strong> ${predict.toFixed(1)} ton/10a</p>
+                <p><strong>역사적 수확량:</strong> ${yield_history.toFixed(1)} ton/10a</p>
+                <p><strong>시군구 기준예측 생산량:</strong> ${area_predict.toFixed(1)} ton/10a</p>
+                <p><strong>실제 면적:</strong> ${area_ha.toFixed(1)} ha</p>
+                <p><strong>UID:</strong> ${UID}</p>
+              </div>`,
+              {
+                opacity: 0.9,
+                permanent: false,
+                direction: 'top',
+                className: 'custom-tooltip',
+              },
+            );
+          }
+        },
+      },
+    );
+    return partial;
+  };
+
+  // NOTE: Load First Partial FarmMap
   const mapInitialized = async () => {
     if (mapRef.current) {
-      console.log('Map initialized:', mapRef.current);
-      const response = await fetch('https://s3.ql.gl/county.geojson');
-      const data = await response.json();
-      const geoJsonData = geoJSON(data as unknown as GeoJsonObject, {
+      await appendGeoJson('https://s3.ql.gl/county.geojson', {
         style: {
           color: '#00aa00',
-          weight: 2,
-          opacity: 0.7,
+          weight: 1,
+          opacity: 0.3,
           fillOpacity: 0,
         },
       });
-      geoJsonData.addTo(mapRef.current);
 
-      const responseResult = await fetch('https://s3.ql.gl/result.geojson');
-      const dataResult = await responseResult.json();
-      const geoResultJsonData = geoJSON(
-        dataResult as unknown as GeoJsonObject,
+      await appendGeoJson(
+        'https://s3.ql.gl/prediction_result_withoutFarmmap.geojson',
         {
           pane: 'overlayPane',
           style: {
@@ -63,22 +120,38 @@ export default function GISContainer({ children, width, height }: MapProps) {
           },
           onEachFeature: (feature, layer) => {
             if (feature.properties) {
-              layer.bindTooltip(
-                gisToolTip(feature.properties as unknown as ToolTipProperties),
+              console.log(feature.properties);
+              layer.bindPopup(
+                gisToolTip(
+                  layer,
+                  feature.properties as unknown as ToolTipProperties,
+                ),
                 {
-                  permanent: false,
+                  closeButton: true,
                   interactive: true,
-                  direction: 'auto',
-                  className: 'custom-tooltip',
-                  opacity: 0.8,
-                  sticky: true,
+                  closeOnEscapeKey: true,
+                  autoPanPadding: [0, 0],
+                  pane: 'popupPane',
+                  className: 'custom-popup',
                 },
               );
+              layer.on('closePopup', () => {
+                console.log('Popup closed');
+                layer.closePopup();
+              });
             }
           },
         },
       );
-      geoResultJsonData.addTo(mapRef.current);
+
+      Array.from({ length: 20 })
+        .fill(0)
+        .map((_, idx) => idx + 1)
+        .forEach((idx) => {
+          getPartial(idx).then((partial) => {
+            console.log(`Partial ${idx} loaded`, partial);
+          });
+        });
 
       const _getMap = async (fileName: string): GeoRasterLayer => {
         const fileUrl = `https://s3.ql.gl/tiff/${fileName}.tif`;
