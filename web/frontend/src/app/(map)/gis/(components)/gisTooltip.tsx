@@ -64,7 +64,7 @@ export function gisToolTip(
           <span>추정 생산량</span>
           <span>
             <span>${predict}[ton/10a] </span>
-            <span className='text-indigo-300'>({(0.0).toFixed(1)}%)</span>
+            {/* <span className='text-indigo-300'>({(0.0).toFixed(1)}%)</span> */}
           </span>
         </div>
         <div className='flex justify-between'>
