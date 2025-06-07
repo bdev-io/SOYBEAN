@@ -71,9 +71,9 @@ export default function GISContainer({ children, width, height }: MapProps) {
                 <h1 class="tooltip-title">${sidonm}</h1>
                 <p><strong>팜맵 ID:</strong> ${팜맵ID}</p>
                 <p><strong>법정동 주소:</strong> ${법정동주소}</p>
-                <p><strong>시군구 기준예측 생산량:</strong> ${area_predict.toFixed(1)} ton/10a</p>
-                <p><strong>면적(m^2):</strong> ${면적.toFixed(2)} m^2</p>
-                <p><strong>면적(acre):</strong> ${area_ha.toFixed(1)} ha</p>
+                <p><strong>시군구 기준예측 생산량:</strong> ${(area_predict ?? 0).toFixed(1)} ton/10a</p>
+                <p><strong>면적(m^2):</strong> ${(면적 ?? 0).toFixed(2)} m^2</p>
+                <p><strong>면적(acre):</strong> ${(area_ha ?? 0).toFixed(1)} ha</p>
                 <p><strong>UID:</strong> ${UID}</p>
               </div>`,
               {
